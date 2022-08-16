@@ -10,7 +10,6 @@ void convert(string S){
         }
     }
     cout<<S<<endl;
-
 }
 bool isPal(string S){
     int start = 0;

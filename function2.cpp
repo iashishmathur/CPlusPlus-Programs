@@ -1,23 +1,27 @@
 #include<iostream>
 using namespace std;
 
-
-
-
-int main(){
-    int n;
-    cin>>n;
-    int temp=0;
-    // while(n!=0){
-    //     temp = n%10;
-    //     n = n/10;
-    // }
-    for(int i=1; i<=n; i++)
-    if(n==temp){
-        cout<<"palindrom"<<endl;
+string isPal(int num){
+    int temp = 0, sum = 0, num1;
+    num1 = num; //creating the copy of the number
+    while(num!=0){
+        temp = num % 10;
+        sum = sum*10 + temp;
+        num = num/10;
+    }
+    cout<<"is "<<num1<<" Palindrome? ";
+    if(num1 == sum){
+        
+        return "Yes";
     }
     else{
-        cout<<"not palindrom"<<endl;
+        return "No";
     }
+}
+int main(){
+    int n;
+    cout<<"Enter the No. to check the no. is Palindrome or Not :";
+    cin>>n; 
+    cout<<isPal(n)<<endl;
     return 0;
 }

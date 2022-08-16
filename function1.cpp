@@ -13,7 +13,10 @@ int power(int num1, int num2){
 
 int main(){
     int a,b;
-    cin>>a>>b;
+    cout<<"Enter the no. : ";
+    cin>>a;
+    cout<<"Enter the power : ";
+    cin>>b;
     int answer = power(a, b);
     cout<<answer<<endl;
     return 0;
